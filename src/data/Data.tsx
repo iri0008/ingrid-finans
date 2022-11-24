@@ -1,7 +1,9 @@
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 import { Button, Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react';
+import { GlbVar } from '../context/Context';
+
 
 
 const COLUMNS1: GridColDef[] = [
@@ -36,10 +38,12 @@ const COLUMNS1: GridColDef[] = [
     sortable: false,
     renderCell: (params) => {
       let navigate = useNavigate();   //Tidligere het denne useHistory!
+      const { glb_saksnummer, set_saksnummer } = useContext(GlbVar);
       const onClick = (e: any) => {
         navigate("/edit");
-        //const currentRow = params.row;
-        //return alert(JSON.stringify(currentRow, null, 4));
+        //AURORA: SE HER :D VI MÅ FÅ HENTET UT SAKSNUMMERET FRA RADEN OG SÅ SATT DET I GLB_SAKSNUMMER.
+        console.log({ glb_saksnummer });
+        
       };
       
       return (
@@ -175,7 +179,7 @@ let ROWS1= [
   },
   ];
 
-  export {COLUMNS1, ROWS1}
+export { COLUMNS1, ROWS1 };
 
 
 
