@@ -1,0 +1,196 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  height: 10%;
+  width: 100%;
+  top: 0;
+  background: #415890;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.header_title {
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header_p {
+  float: right;
+  margin-top: 2rem;
+  margin-right: 4%;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* LOGIN */
+.login_main{
+  position: relative;
+  justify-content: center;
+  top: 20%;
+  border-radius: 20px;
+  user-select: none;
+  background-color: #f1f7fe;
+  height: 45vh;
+  width: 40vh;
+}
+
+.login_main p {
+  padding-bottom: 3rem;
+  font-size: 40px;
+  color: #415890;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Dette er hele den input formen som inneholder alt. */
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+}
+
+.login_input_brukernavn,
+.login_input_passord {
+  background-color: hsl(0deg 0% 100%);
+  box-shadow: 0 0 2em hsl(231deg 62% 94%);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #415890; /* hsl(0deg 0% 0%);*/
+  font-weight: 500;
+  margin-top: -3em;
+  width: 80%;
+  margin-left: auto;
+}
+
+.login_input_brukernavn {
+    margin-bottom: 4rem;
+}
+
+.login_input_passord {
+    margin-bottom: 2rem;
+}
+
+input[type=text],
+input[type=password] {
+  outline: none;
+  border: none;
+  color:  hsl(0deg 0% 30%);
+  font-size: 0.9em;
+}
+
+.login_button{
+  padding: 1em;
+  background: #415890;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  width: 70%;
+  margin-left: 2em;
+}
+/* SELECT BANK PAGE   */
+
+.bank {
+  position: relative;
+  justify-content: center;
+  top: 20%;
+  border-radius: 20px;
+  background-color: #f1f7fe;
+  height: 20%;
+  width: 80%;
+}
+
+.bank_content {
+  margin-left: 2rem;
+  text-align: center;
+}
+
+.bank_content h4 {
+  color: #415890;
+}
+
+.bank_selector{
+  width: 80%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+.bank_button {
+  padding: 1em;
+  background: #415890;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  width: 80%;
+  margin-left: 0.4em;
+}
+
+
+ /* MAIN PAGE  */
+
+.main {
+  position: relative;
+  justify-content: center;
+  top: 20%;
+  border-radius: 20px;
+  background-color: #f1f7fe;
+  height: 75%;
+  width: 80%;
+}
+
+.main_content {
+  margin-left: 2rem;
+  color: #415890;
+}
+
+.styling_Table{
+  background: lightgrey;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+.styling_h1{
+  color: #000;
+  padding-top: 5rem;
+}
+
+
+/* EDIT */
+
+.edit {
+  position: relative;
+  justify-content: center;
+  top: 20%;
+  border-radius: 20px;
+  background-color: #f1f7fe;
+  height: 75%;
+  width: 80%;
+}
