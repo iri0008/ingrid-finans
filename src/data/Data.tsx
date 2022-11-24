@@ -1,7 +1,7 @@
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 import { Button, Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, cloneElement } from 'react';
 import { GlbVar } from '../context/Context';
 
 
@@ -41,9 +41,9 @@ const COLUMNS1: GridColDef[] = [
       const { glb_saksnummer, set_saksnummer } = useContext(GlbVar);
       const onClick = (e: any) => {
         navigate("/edit");
-        //AURORA: SE HER :D VI MÅ FÅ HENTET UT SAKSNUMMERET FRA RADEN OG SÅ SATT DET I GLB_SAKSNUMMER.
-        console.log({ glb_saksnummer });
-        
+        console.log(params.id);
+        set_saksnummer?.(params.id);
+        //console.log({ glb_saksnummer });
       };
       
       return (
