@@ -11,30 +11,37 @@ const COLUMNS1: GridColDef[] = [
     headerName: "Saksnummer",
     field: "id",
     width: 100,
+    headerClassName: 'super-app-theme--header',
   },
   {
     headerName: "Navn",
     field: "name",
     width: 200,
+    headerClassName: 'super-app-theme--header',
+
   },
   {
     headerName: "Personnummer",
     field: "personnummer",
     width: 350,
+    headerClassName: 'super-app-theme--header',
   },
   {
     headerName: "Dato",
     field: "dato",
+    headerClassName: 'super-app-theme--header',
   },
   {
     headerName: "Status",
     field: "status",
     width: 100,
+    headerClassName: 'super-app-theme--header',
   },
   {
     headerName: "Rediger",
     field: "rediger",
     width: 200,
+    headerClassName: 'super-app-theme--header',
     sortable: false,
     renderCell: (params) => {
       let navigate = useNavigate();   //Tidligere het denne useHistory!

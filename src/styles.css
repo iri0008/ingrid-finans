@@ -1,56 +1,114 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap');
+
+body {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-}
-
-body {
   display: flex;
   flex-direction: column;
-}
+  font-family: 'Lato', sans-serif;}
 
 /* HEADER */
+
 .header {
-  display: flex;
-  justify-content: space-between;
+  background-color: #415890;
+  color: white;
+  left: 0;
   position: fixed;
-  height: 10%;
-  width: 100%;
   top: 0;
-  background: #415890;
-  color: #fff;
-  font-size: 2rem;
-  margin-bottom: 5rem;
-  z-index: 1;
+  width: 100%;
+  z-index: 1000;
+  height: 100px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  bottom: 0;
+  align-items: center;
+  flex-wrap: wrap;
   text-transform: uppercase;
 }
 
-.header_title {
-  margin-top: 1rem;
-  text-align: center;
+.header__logo {
   display: flex;
+  height: 60px;
+  justify-content: space-between;
+  gap: 1px;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.header__logo:link,
+.header__logo:active,
+.header__logo:visited {
+  border: 0;
+  color: white;
+}
+
+.header__logo:hover,
+.header__logo:focus {
+  background-color: transparent;
+  color: #ffcf00;
+}
+
+.header__logo:hover .header__logo-svg-path-a,
+.header__logo:hover .header__logo-svg-path-c,
+.header__logo:focus .header__logo-svg-path-a,
+.header__logo:focus .header__logo-svg-path-c {
+  fill: #ffcf00;
+}
+
+.header__logo-svg {
+  height: 82px;
+  position: relative;
+  width: 65px;
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  margin-top: 1.5rem;
+}
+
+@media all and (max-width: 639px) {
+  .header__logo-svg {
+    -webkit-transform: scale(0.57);
+    transform: scale(0.57);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+  }
+}
+
+.header__logo-svg-path-a {
+  fill: #ffcf00;
+}
+
+.header__logo-svg-path-c {
+  fill: #646c7c;
+}
+
+.header_title {
+  font-size: 2rem;
 }
 
 .header_p {
-  float: right;
-  margin-top: 2rem;
-  margin-right: 4%;
-  color: #fff;
   font-size: 12px;
 }
+
+.header__left {
+  font-size: 12px;
+}
+
 
 /* LOGIN */
 .login_main{
   position: relative;
   justify-content: center;
   top: 20%;
-  border-radius: 20px;
+  border-radius: 10px;
   user-select: none;
-  background-color: #f1f7fe;
+  background-color: #dde6ee;
   height: 45vh;
   width: 40vh;
 }
@@ -58,7 +116,7 @@ body {
 .login_main p {
   padding-bottom: 3rem;
   font-size: 40px;
-  color: #415890;
+  color: #3e5b6e;
   font-weight: 600;
   text-align: center;
 }
@@ -79,8 +137,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  border-radius: 20px;
-  color: #415890; /* hsl(0deg 0% 0%);*/
+  border-radius: 10px;
+  color: #3e5b6e; /* hsl(0deg 0% 0%);*/
   font-weight: 500;
   margin-top: -3em;
   width: 80%;
@@ -105,7 +163,7 @@ input[type=password] {
 
 .login_button{
   padding: 1em;
-  background: #415890;
+  background: #003865;
   color: #fff;
   border: none;
   border-radius: 30px;
@@ -119,9 +177,9 @@ input[type=password] {
   position: relative;
   justify-content: center;
   top: 20%;
-  border-radius: 20px;
-  background-color: #f1f7fe;
-  height: 20%;
+  border-radius: 10px;
+  background-color: #eef5fb;
+  height: 30%;
   width: 80%;
 }
 
@@ -131,7 +189,7 @@ input[type=password] {
 }
 
 .bank_content h4 {
-  color: #415890;
+  color: #3e5b6e;
 }
 
 .bank_selector{
@@ -144,13 +202,14 @@ input[type=password] {
 
 .bank_button {
   padding: 1em;
-  background: #415890;
+  background: #003865;
   color: #fff;
   border: none;
   border-radius: 30px;
   font-weight: 600;
-  width: 80%;
+  width: 150px;
   margin-left: 0.4em;
+  margin-top: 1em;
 }
 
 
@@ -159,27 +218,20 @@ input[type=password] {
 .main {
   position: relative;
   justify-content: center;
-  top: 20%;
-  border-radius: 20px;
-  background-color: #f1f7fe;
+  top: 15%;
+  border-radius: 10px;
+  background-color: white;
   height: 75%;
   width: 80%;
 }
 
 .main_content {
   margin-left: 2rem;
-  color: #415890;
+  color: #3e5b6e;
 }
 
-.styling_Table{
-  background: lightgrey;
-  border-spacing: 0;
-  border: 1px solid black;
-}
-
-.styling_h1{
-  color: #000;
-  padding-top: 5rem;
+.main_content p {
+  color: black;
 }
 
 
@@ -188,9 +240,26 @@ input[type=password] {
 .edit {
   position: relative;
   justify-content: center;
-  top: 20%;
-  border-radius: 20px;
-  background-color: #f1f7fe;
+  top: 15%;
   height: 75%;
   width: 80%;
+}
+
+.edit h1 {
+  font-weight: 400;
+}
+
+.melding {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.melding_tekst {
+  width: 60%;
+  height: 40%;
+}
+
+.melding button {
+  width: 30%;
 }

@@ -1,10 +1,22 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { GlbVar } from '../context/Context';
 import "../styles.css"
 import { COLUMNS1, ROWS1 } from "../data/Data";
 import { useNavigate } from "react-router-dom";
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, gridClasses } from '@mui/x-data-grid';
+import Box from '@mui/material/Box';
+import { alpha, styled } from '@mui/material/styles';
+import { TableRow } from '@mui/material';
 
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
 
 const Main = () => {
   const { glb_username } = useContext(GlbVar);
@@ -17,7 +29,6 @@ const Main = () => {
   const dataColumns = COLUMNS1;
   let navigate = useNavigate();
 
-
   return (
     <div className='main'>
       <div className='main_content'>
@@ -27,14 +38,21 @@ const Main = () => {
 
         <div className='main_table'>
           <h1> Forespørsler </h1>
-        <div style={{ height: 300, width: '100%' }}>
-          <DataGrid
-  rows={dataRows}
-  columns={dataColumns}
-  pageSize={5}
-  rowsPerPageOptions={[5]}
+          <Box
+            sx={{  //styling av tabellen
+              height: 300,
+              width: '100%',
+              '& .super-app-theme--header': {
+              backgroundColor: '#abcae9',
+            },
+            }}>
+            <DataGrid
+            rows={dataRows}
+            columns={dataColumns}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
             />
-            </div>
+          </Box>
 
         </div>
       </div>
