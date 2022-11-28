@@ -7,8 +7,6 @@ const Edit = () => {
   const { glb_saksnummer } = useContext(GlbVar);
   const navigate = useNavigate();
 
-  const datarows = ROWS1;
-
   const godkjenn = () => {
     navigate("/main");
     const sak = ROWS1.find((s) => {
@@ -16,7 +14,7 @@ const Edit = () => {
     });
 
     if (sak !== undefined) {
-       sak.status = "godkjent";
+       sak.status = "Godkjent";
     } else {
       alert("FANT IKKE RIKTIG SAKSNUMMER");
     }
@@ -26,9 +24,10 @@ const Edit = () => {
     <div className='edit'>
       <h1> Rediger </h1>
 
+
       {glb_saksnummer !== undefined ?
-        <p> Saksnummer du har valgt: {glb_saksnummer}</p>
-        : <p> Det har skjedd en feil, du har ikke valgt en sak...</p>
+        <p> <b>Saksnummer du har valgt: </b> {glb_saksnummer}</p>
+        : <p className='edit_p_error'> Det har skjedd en feil, du har ikke valgt en sak...</p>
       }
 
 

@@ -16,14 +16,14 @@ const COLUMNS1: GridColDef[] = [
   {
     headerName: "Navn",
     field: "name",
-    width: 200,
+    width: 150,
     headerClassName: 'super-app-theme--header',
 
   },
   {
     headerName: "Personnummer",
     field: "personnummer",
-    width: 350,
+    width: 150,
     headerClassName: 'super-app-theme--header',
   },
   {
@@ -38,9 +38,9 @@ const COLUMNS1: GridColDef[] = [
     headerClassName: 'super-app-theme--header',
   },
   {
-    headerName: "Rediger",
+    headerName: "Rediger status",
     field: "rediger",
-    width: 200,
+    width: 130,
     headerClassName: 'super-app-theme--header',
     sortable: false,
     renderCell: (params) => {
@@ -55,8 +55,7 @@ const COLUMNS1: GridColDef[] = [
       
       return (
         <Stack direction="row" spacing={2}>
-          <Button variant="outlined" color="warning" size="small" onClick={onClick}>Edit</Button>
-          <Button variant="outlined" color="error" size="small" onClick={onClick}>Delete</Button>
+          <Button variant="outlined" color="warning" size="small" onClick={onClick}>Rediger</Button>
         </Stack>
       );
   },

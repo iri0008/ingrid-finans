@@ -33,15 +33,16 @@ const Main = () => {
     <div className='main'>
       <div className='main_content'>
         <h1>Saker til godkjenning</h1>
-        <p>Ditt brukernavn: {glb_username}</p>
-        <p>Du representerer bank: {glb_bank}</p> 
+        <p><b>Ditt brukernavn: </b> {glb_username}</p>
+        <p> <b>Du representerer bank:</b> {glb_bank}</p>
+        <br/>
 
         <div className='main_table'>
           <h1> Forespørsler </h1>
           <Box
             sx={{  //styling av tabellen
-              height: 300,
-              width: '100%',
+              height: 390,
+              width: 720,
               '& .super-app-theme--header': {
               backgroundColor: '#abcae9',
             },

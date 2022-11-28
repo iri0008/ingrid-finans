@@ -116,9 +116,10 @@ body {
 .login_main p {
   padding-bottom: 3rem;
   font-size: 40px;
-  color: #3e5b6e;
+  color: #003865;
   font-weight: 600;
   text-align: center;
+
 }
 
 /* Dette er hele den input formen som inneholder alt. */
@@ -138,7 +139,7 @@ body {
   flex-direction: column;
   gap: 0.5em;
   border-radius: 10px;
-  color: #3e5b6e; /* hsl(0deg 0% 0%);*/
+  color: #415890; /* hsl(0deg 0% 0%);*/
   font-weight: 500;
   margin-top: -3em;
   width: 80%;
@@ -189,7 +190,7 @@ input[type=password] {
 }
 
 .bank_content h4 {
-  color: #3e5b6e;
+  color: #003865;
 }
 
 .bank_selector{
@@ -227,11 +228,11 @@ input[type=password] {
 
 .main_content {
   margin-left: 2rem;
-  color: #3e5b6e;
+  color: #003865;
 }
 
 .main_content p {
-  color: black;
+  color: #003865; /*black*/
 }
 
 
@@ -262,4 +263,8 @@ input[type=password] {
 
 .melding button {
   width: 30%;
+}
+
+.edit_p_error {
+  color: red;
 }
