@@ -28,7 +28,7 @@ const Bank = () => {
   return (
     <div className='bank'>
       <div className="bank_content">
-        <h4>Hei, {glb_username} <br/> Velg hvilken bank du vil representere</h4>
+        <h4>Hei, {glb_username} <br/> <br/> Velg hvilken bank du vil representere</h4>
         <Select className='bank_selector'
           options={possibleBanks}
           onChange={opt => selectedBank = opt?.label}
