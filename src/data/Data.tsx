@@ -55,7 +55,7 @@ const COLUMNS1: GridColDef[] = [
       
       return (
         <Stack direction="row" spacing={2}>
-          <Button variant="outlined" color="warning" size="small" onClick={onClick}>Rediger</Button>
+          <Button sx={{"&:hover": {background: "#ffcf00"}}} variant="outlined" color="primary" size="small" onClick={onClick}>Rediger</Button>
         </Stack>
       );
   },
