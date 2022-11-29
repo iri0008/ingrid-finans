@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { GlbVar } from '../context/Context';
 import "../styles.css"
 import Header from './Header';
+import Burger from './Burger';
 
 
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
 
   return (
     <div className='login_main'>
-      <p>Velkommen! </p>
+      <p>Logg inn </p>
       
       <form className='input' onSubmit={onClickReroute}>
         <div className='login_input_brukernavn'> 
@@ -38,8 +39,7 @@ const Login = () => {
         </div>
         <button type='submit' className='login_button'> Logg inn</button>
       </form>
-  
-    </div>
+      </div>
   )
 };
 

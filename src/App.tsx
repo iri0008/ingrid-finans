@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Main from "./pages/Main";
 import ContextProvider from "./context/Context";
 import Bank from './pages/Bank';
+import Burger from './pages/Burger';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
     <div className='App'> 
     <BrowserRouter>
       <ContextProvider>
-        <Header/>
+          <Header />
+          <Burger  />
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/bank" element={<Bank />} />
