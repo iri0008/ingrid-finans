@@ -16,13 +16,15 @@ const possibleBanks = [
 const Bank = () => {
   let navigate = useNavigate();   //Tidligere het denne useHistory!
   const { glb_username } = useContext(GlbVar);
-  const {set_bank } = useContext(GlbVar);
+  const { set_bank } = useContext(GlbVar);
+  const {sti, setSti } = useContext(GlbVar);
 
   let selectedBank: string | undefined;
   
   const UpdateBankInfo = () => {
     navigate("/main");
     set_bank?.(selectedBank);
+    setSti?.(sti+"/Bank");
   }
 
   return (

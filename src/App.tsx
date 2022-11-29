@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './styles.css'
 import "./styles/app.css"
@@ -9,15 +9,18 @@ import Main from "./pages/Main";
 import ContextProvider from "./context/Context";
 import Bank from './pages/Bank';
 import Burger from './pages/Burger';
+import Sti from './pages/Sti';
 
 
 function App() {
+
   return (
     <div className='App'> 
     <BrowserRouter>
       <ContextProvider>
           <Header />
-          <Burger  />
+          <Burger />
+          <Sti />
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/bank" element={<Bank />} />

@@ -46,11 +46,12 @@ const COLUMNS1: GridColDef[] = [
     renderCell: (params) => {
       let navigate = useNavigate();   //Tidligere het denne useHistory!
       const { glb_saksnummer, set_saksnummer } = useContext(GlbVar);
+      const {sti, setSti } = useContext(GlbVar);
       const onClick = (e: any) => {
         navigate("/edit");
         console.log(params.id);
         set_saksnummer?.(params.id);
-        //console.log({ glb_saksnummer });
+        setSti?.(sti+"/Rediger");
       };
       
       return (

@@ -11,6 +11,7 @@ const Login = () => {
   let navigate = useNavigate();   //Tidligere het denne useHistory!
   const inputRef = useRef<HTMLInputElement>(null);
   const { glb_username, set_username } = useContext(GlbVar);
+  const { sti, setSti } = useContext(GlbVar);
   let lcl_user: string | undefined = "";
 
   const onInput = () => {
@@ -21,6 +22,7 @@ const Login = () => {
   const onClickReroute = () => {
     navigate("/bank");
     set_username?.(lcl_user); //må ha ?. fordi den er i interfacet satt som optional, og kand erfor være undefined. Hvis referansen er udefined eller null så returnerer den bare undefined uten å kjøre funksjonen for å unngå feilmelding, hvis den ikke er undefined/null så kjøres funksjonen.
+    setSti?.("Logg-inn/Main");
   }
   
 

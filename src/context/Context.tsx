@@ -8,12 +8,14 @@ export interface GlbProps {
   set_username?: SetValue,
   glb_bank?: string,
   set_bank?: SetValue,
-  glb_saksnummer?: string;
-  set_saksnummer?: SetValue;
-  glb_name?: string;
-  set_name?: SetValue;
-  burgerVisible?: boolean;
+  glb_saksnummer?: string,
+  set_saksnummer?: SetValue,
+  glb_name?: string,
+  set_name?: SetValue,
+  burgerVisible?: boolean,
   setBurgerVisible?: SetValue,
+  sti?: string,
+  setSti?: SetValue,
 }
 
 // 2) DEFAULT VALUE(S)
@@ -21,6 +23,7 @@ const initState: GlbProps = {
   glb_username: "Testbruker AI",
   glb_bank: "Nordea",
   burgerVisible: false,
+  sti: "Logg-Inn",
 }
 
 // 3) CREATE CONTEXT
@@ -32,10 +35,11 @@ const ContextProvider = ({children}:{children: React.ReactNode}) => {
   const [glbBank, setGlbBank] = React.useState();
   const [glbSaksnummer, setGlbSaksnummer] = React.useState();
   const [glbName, setGlbName] = React.useState();
-   const[burgerVisible, setBurgerVisible] = React.useState();
+  const [burgerVisible, setBurgerVisible] = React.useState();
+  const[sti, setSti] = React.useState();
   
   return (
-    <GlbVar.Provider value={{glb_username: glbUsername, set_username: setGlbUsername, glb_bank: glbBank, set_bank: setGlbBank ,glb_saksnummer: glbSaksnummer, set_saksnummer: setGlbSaksnummer,glb_name: glbName,set_name: setGlbName, burgerVisible: burgerVisible, setBurgerVisible: setBurgerVisible}}>
+    <GlbVar.Provider value={{glb_username: glbUsername, set_username: setGlbUsername, glb_bank: glbBank, set_bank: setGlbBank ,glb_saksnummer: glbSaksnummer, set_saksnummer: setGlbSaksnummer,glb_name: glbName,set_name: setGlbName, burgerVisible: burgerVisible, setBurgerVisible: setBurgerVisible, sti: sti, setSti: setSti}}>
       {children}
     </GlbVar.Provider>
   )
