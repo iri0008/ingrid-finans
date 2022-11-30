@@ -25,7 +25,7 @@ const initState: GlbProps = {
   glb_username: "Testbruker AI",
   glb_bank: "Nordea",
   glb_name: "Ukjent Testperson",
-  glb_persnr: "00000011111"
+  glb_persnr: "00000011111",
   burgerVisible: false,
   sti: "Logg-Inn",
 }

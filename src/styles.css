@@ -12,7 +12,7 @@ body {
 /* HEADER */
 
 .header {
-  background-color: #46588c; /* #415890;*/
+  background-color: rgb(58, 89, 148); /* #415890;*/
   color: white;
   left: 0;
   position: fixed;
