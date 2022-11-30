@@ -12,12 +12,16 @@ export interface GlbProps {
   set_saksnummer?: SetValue;
   glb_name?: string;
   set_name?: SetValue;
+  glb_persnr?: string;
+  set_persnr?: SetValue;
 }
 
 // 2) DEFAULT VALUE(S)
 const initState: GlbProps = {
   glb_username: "Testbruker AI",
   glb_bank: "Nordea",
+  glb_name: "Ukjent Testperson",
+  glb_persnr: "00000011111"
 }
 
 // 3) CREATE CONTEXT
@@ -29,15 +33,21 @@ const ContextProvider = ({children}:{children: React.ReactNode}) => {
   const [glbBank, setGlbBank] = React.useState();
   const [glbSaksnummer, setGlbSaksnummer] = React.useState();
   const [glbName, setGlbName] = React.useState();
-  
+  const [glbPersnr, setGlbPersnr] = React.useState();
+
   return (
-    <GlbVar.Provider value={{glb_username: glbUsername, set_username: setGlbUsername, glb_bank: glbBank, set_bank: setGlbBank ,glb_saksnummer: glbSaksnummer, set_saksnummer: setGlbSaksnummer,glb_name: glbName,set_name: setGlbName}}>
+    <GlbVar.Provider value={{
+      glb_username: glbUsername, set_username: setGlbUsername,
+      glb_bank: glbBank, set_bank: setGlbBank,
+      glb_saksnummer: glbSaksnummer, set_saksnummer: setGlbSaksnummer,
+      glb_name: glbName, set_name: setGlbName,
+      glb_persnr: glbPersnr, set_persnr: setGlbPersnr
+    }}>
       {children}
     </GlbVar.Provider>
   )
 }
 
 //USECONTEXT 
-
 
 export default ContextProvider;

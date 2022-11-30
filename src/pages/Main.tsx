@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { GlbVar } from '../context/Context';
-import "../styles.css"
+import "../styles.css";
 import { COLUMNS1, ROWS1 } from "../data/Data";
 import { useNavigate } from "react-router-dom";
 import { DataGrid, gridClasses } from '@mui/x-data-grid';

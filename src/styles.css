@@ -244,10 +244,27 @@ input[type=password] {
   top: 15%;
   height: 75%;
   width: 80%;
+  color: #003865;
 }
 
 .edit h1 {
   font-weight: 400;
+}
+
+.edit_p_error {
+  color: red;
+}
+
+.edit_person {
+  font-size: 70%;
+}
+
+.edit_person p {
+  margin: 0;
+}
+
+.what_when {
+  font-size: 90%;
 }
 
 .melding {
@@ -255,16 +272,20 @@ input[type=password] {
   flex-direction: column;
 }
 
+.add_melding {
+  font-size: 1.2rem;
+}
 
 .melding_tekst {
   width: 60%;
-  height: 40%;
+  height: 100px;
+}
+
+.melding_fil {
+  width: 40%;
+  height: 70px;
 }
 
 .melding button {
   width: 30%;
-}
-
-.edit_p_error {
-  color: red;
 }
