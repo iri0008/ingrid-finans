@@ -48,17 +48,20 @@ const COLUMNS1: GridColDef[] = [
       const { glb_saksnummer, set_saksnummer } = useContext(GlbVar);
       const { glb_name, set_name } = useContext(GlbVar);
       const { glb_persnr, set_persnr } = useContext(GlbVar);
+      const {sti, setSti } = useContext(GlbVar);
+      
       const onClick = (e: any) => {
         navigate("/edit");
         console.log(params.id);
         set_saksnummer?.(params.id);
         set_name?.(params.row.name);
         set_persnr?.(params.row.personnummer);
+        setSti?.(sti+"/Rediger");
       };
       
       return (
         <Stack direction="row" spacing={2}>
-          <Button variant="outlined" color="warning" size="small" onClick={onClick}>Rediger</Button>
+          <Button sx={{"&:hover": {background: "#ffcf00"}}} variant="outlined" color="primary" size="small" onClick={onClick}>Rediger</Button>
         </Stack>
       );
   },
@@ -189,12 +192,6 @@ let ROWS1= [
   ];
 
 export { COLUMNS1, ROWS1 };
-
-
-
-
-
-
 
 
 

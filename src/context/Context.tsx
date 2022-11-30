@@ -8,10 +8,14 @@ export interface GlbProps {
   set_username?: SetValue,
   glb_bank?: string,
   set_bank?: SetValue,
-  glb_saksnummer?: string;
-  set_saksnummer?: SetValue;
-  glb_name?: string;
-  set_name?: SetValue;
+  glb_saksnummer?: string,
+  set_saksnummer?: SetValue,
+  glb_name?: string,
+  set_name?: SetValue,
+  burgerVisible?: boolean,
+  setBurgerVisible?: SetValue,
+  sti?: string,
+  setSti?: SetValue,
   glb_persnr?: string;
   set_persnr?: SetValue;
 }
@@ -22,6 +26,8 @@ const initState: GlbProps = {
   glb_bank: "Nordea",
   glb_name: "Ukjent Testperson",
   glb_persnr: "00000011111"
+  burgerVisible: false,
+  sti: "Logg-Inn",
 }
 
 // 3) CREATE CONTEXT
@@ -34,6 +40,8 @@ const ContextProvider = ({children}:{children: React.ReactNode}) => {
   const [glbSaksnummer, setGlbSaksnummer] = React.useState();
   const [glbName, setGlbName] = React.useState();
   const [glbPersnr, setGlbPersnr] = React.useState();
+  const [burgerVisible, setBurgerVisible] = React.useState();
+  const[sti, setSti] = React.useState();
 
   return (
     <GlbVar.Provider value={{
@@ -41,7 +49,9 @@ const ContextProvider = ({children}:{children: React.ReactNode}) => {
       glb_bank: glbBank, set_bank: setGlbBank,
       glb_saksnummer: glbSaksnummer, set_saksnummer: setGlbSaksnummer,
       glb_name: glbName, set_name: setGlbName,
-      glb_persnr: glbPersnr, set_persnr: setGlbPersnr
+      glb_persnr: glbPersnr, set_persnr: setGlbPersnr,
+      burgerVisible: burgerVisible, setBurgerVisible: setBurgerVisible, 
+      sti: sti, setSti: setSti
     }}>
       {children}
     </GlbVar.Provider>

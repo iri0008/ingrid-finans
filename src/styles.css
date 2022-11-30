@@ -12,13 +12,13 @@ body {
 /* HEADER */
 
 .header {
-  background-color: #415890;
+  background-color: #46588c; /* #415890;*/
   color: white;
   left: 0;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 99999;
   height: 100px;
 }
 
@@ -97,29 +97,84 @@ body {
 }
 
 .header__left {
-  font-size: 12px;
+  width: rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
 }
+
+.burger{
+  width: 1rem;
+  height: 0.18rem;
+  border-radius: 10px;
+  background-color: white;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+.burger-false{
+  display: none;
+}
+
+.burger-visible{
+display: block;
+position: fixed;
+z-index: 2;
+margin-top: 6rem;
+left: 2rem;
+color: #000;
+background-color: #edeff1;
+width: 123px;
+height: 95px;
+border-radius: 10px;
+/*box-shadow: 0 0 2em hsl(231deg 62% 94%); */
+box-shadow: 1px 1px 2rem hsl(231deg 62% 94%);
+  -webkit-box-shadow: 1px 1px 2px hsl(231deg 62% 94%);
+  -moz-box-shadow: 12px 10px 4px hsl(231deg 62% 94%);
+}
+
+.burger-visible p {
+  margin-left: 1rem;
+}
+
+.burger-visisble-p:hover{
+  color: #ffcf00;
+}
+
+/* STI */
+.sti-viser{
+  position: fixed;
+  margin-top: 7rem;
+  left: 4rem;
+  font-size: 12px;
+  font-style: italic;
+}
+
 
 
 /* LOGIN */
 .login_main{
   position: relative;
   justify-content: center;
-  top: 20%;
-  border-radius: 10px;
+  top: 8rem;
+  border-radius: 8px;
+  background-color: #eaf2fb ; /*#e7f1f9  #dde6ee; */
   user-select: none;
-  background-color: #dde6ee;
-  height: 45vh;
+  height: 40vh;
   width: 40vh;
+  z-index: 1;
 }
 
 .login_main p {
+  padding-top: 0.5rem;
   padding-bottom: 3rem;
-  font-size: 40px;
-  color: #003865;
+  font-size: 30px;
+  color: #000;  /*#5c6fa8  #306fc7; /* #003865;*/
   font-weight: 600;
-  text-align: center;
-
+  text-align: left;
+  padding-left: 2.3rem;
+  font-weight: 400;
 }
 
 /* Dette er hele den input formen som inneholder alt. */
@@ -128,6 +183,8 @@ body {
   flex-direction: column;
   width: 90%;
   align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 2em hsl(231deg 62% 94%);
 }
 
 .login_input_brukernavn,
@@ -139,7 +196,7 @@ body {
   flex-direction: column;
   gap: 0.5em;
   border-radius: 10px;
-  color: #415890; /* hsl(0deg 0% 0%);*/
+  color: #000; /* #5c6fa8 #306fc7; #415890;  hsl(0deg 0% 0%);*/
   font-weight: 500;
   margin-top: -3em;
   width: 80%;
@@ -163,15 +220,22 @@ input[type=password] {
 }
 
 .login_button{
-  padding: 1em;
-  background: #003865;
+  padding: 1rem;
+  background: #46588c; /* #003865;*/
   color: #fff;
   border: none;
   border-radius: 30px;
   font-weight: 600;
   width: 70%;
-  margin-left: 2em;
+  margin-left: 2rem;
 }
+
+.login_button:hover{
+  background: #ffcf00;
+  transition: 0.5s;
+}
+
+
 /* SELECT BANK PAGE   */
 
 .bank {
@@ -180,7 +244,7 @@ input[type=password] {
   top: 20%;
   border-radius: 10px;
   background-color: #eef5fb;
-  height: 30%;
+  height: 250px;
   width: 80%;
 }
 
@@ -190,7 +254,9 @@ input[type=password] {
 }
 
 .bank_content h4 {
-  color: #003865;
+  color: #000; /*#003865;*/
+  text-align: left;
+  font-weight: 400;
 }
 
 .bank_selector{
@@ -213,6 +279,11 @@ input[type=password] {
   margin-top: 1em;
 }
 
+.bank_button:hover {
+  background: #ffcf00;
+  transition: 0.5s;
+}
+
 
  /* MAIN PAGE  */
 
@@ -228,11 +299,16 @@ input[type=password] {
 
 .main_content {
   margin-left: 2rem;
-  color: #003865;
+  color: #000;
+}
+
+.main_content h1{
+  font-weight: 400;
 }
 
 .main_content p {
-  color: #003865; /*black*/
+  color: #000; /*black*/
+  
 }
 
 
