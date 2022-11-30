@@ -8,7 +8,6 @@ import Login from "./pages/Login";
 import Main from "./pages/Main";
 import ContextProvider from "./context/Context";
 import Bank from './pages/Bank';
-import UploadFile from "./pages/UploadFile"
 
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
           <Route path="/bank" element={<Bank />} />
           <Route path="/main" element={<Main />} />
           <Route path="/edit" element={<Edit />} />
-          <Route path="/upload" element={<UploadFile />} />
 
         </Routes>
         </ContextProvider>

@@ -34,13 +34,8 @@ const Edit = () => {
         : <p className='edit_p_error'> Det har skjedd en feil, du har ikke valgt en sak...</p>
       }
 
-      {glb_name !== undefined ?
-        <p>funker {glb_name}</p>
-        : <p> funker ikke {glb_name}</p>
-      }
-
       <div className='edit_person'>
-        <p>Navn: </p>
+        <p>Navn: {glb_name}</p>
         <p>Personnummer: {glb_persnr}</p>
       </div>
 
@@ -61,7 +56,7 @@ const Edit = () => {
 
       <div className='hjemmel'>
         <h3>Hjemmel</h3>
-        <p>Referanse (BokID): </p>
+        <p>Referanse (DokID): </p>
         <p>Besluttet av: </p>
         <p>Fil av signert dokument</p>
       </div>
