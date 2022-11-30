@@ -46,11 +46,16 @@ const COLUMNS1: GridColDef[] = [
     renderCell: (params) => {
       let navigate = useNavigate();   //Tidligere het denne useHistory!
       const { glb_saksnummer, set_saksnummer } = useContext(GlbVar);
+      const { glb_name, set_name } = useContext(GlbVar);
+      const { glb_persnr, set_persnr } = useContext(GlbVar);
       const {sti, setSti } = useContext(GlbVar);
+      
       const onClick = (e: any) => {
         navigate("/edit");
         console.log(params.id);
         set_saksnummer?.(params.id);
+        set_name?.(params.row.name);
+        set_persnr?.(params.row.personnummer);
         setSti?.(sti+"/Rediger");
       };
       
@@ -190,9 +195,7 @@ export { COLUMNS1, ROWS1 };
 
 
 
-
-
-
-
-
+  function set_personummer(personnummer: any) {
+    throw new Error('Function not implemented.');
+  }
 

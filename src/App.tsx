@@ -26,6 +26,7 @@ function App() {
           <Route path="/bank" element={<Bank />} />
           <Route path="/main" element={<Main />} />
           <Route path="/edit" element={<Edit />} />
+
         </Routes>
         </ContextProvider>
       </BrowserRouter>
