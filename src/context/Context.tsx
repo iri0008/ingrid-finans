@@ -35,7 +35,7 @@ export const GlbVar = React.createContext<GlbProps>(initState);
 
 // 4) PROVIDER
 const ContextProvider = ({children}:{children: React.ReactNode}) => {
-  const [glbUsername, setGlbUsername] = React.useState();
+  const [glbUsername, setGlbUsername] = React.useState(initState.glb_username);
   const [glbBank, setGlbBank] = React.useState();
   const [glbSaksnummer, setGlbSaksnummer] = React.useState();
   const [glbName, setGlbName] = React.useState();

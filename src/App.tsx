@@ -15,9 +15,9 @@ import Sti from './pages/Sti';
 function App() {
 
   return (
+    <ContextProvider>
     <div className='App'> 
     <BrowserRouter>
-      <ContextProvider>
           <Header />
           <Burger />
           <Sti />
@@ -28,9 +28,9 @@ function App() {
           <Route path="/edit" element={<Edit />} />
 
         </Routes>
-        </ContextProvider>
       </BrowserRouter>
       </div>
+      </ContextProvider>
   );
 }
 
